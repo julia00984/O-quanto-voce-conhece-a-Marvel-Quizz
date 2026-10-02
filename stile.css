@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --cor-vermelho: #E8362D;
+    --cor-vermelho-escuro: #B91F1A;
+    --cor-tinta: #141414;
+    --cor-papel: #FFF8EC;
+    --cor-amarelo: #FFE07A;
+    --cor-texto: #2A2622;
+    color-scheme: light;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-vermelho);
+    background-image: radial-gradient(circle, rgba(20, 20, 20, 0.18) 1.5px, transparent 1.6px);
+    background-size: 14px 14px;
+    background-attachment: fixed;
+    color: var(--cor-texto);
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.conteudo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-principal {
+    width: 100%;
+    max-width: 620px;
+    padding: 36px 28px 40px;
+    text-align: center;
+    background-color: var(--cor-papel);
+    border: 4px solid var(--cor-tinta);
+    box-shadow: 12px 12px 0 var(--cor-tinta);
+}
+
+h1 {
+    font-family: "Bangers", Impact, "Arial Black", sans-serif;
+    font-size: clamp(2.1rem, 8vw, 3.4rem);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cor-vermelho);
+    text-shadow: 3px 3px 0 var(--cor-tinta);
+}
+
+.tela-inicial p {
+    margin-top: 28px;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.caixa-perguntas {
+    margin-top: 30px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--cor-tinta);
+}
+
+.caixa-alternativas {
+    display: grid;
+    gap: 16px;
+    margin-top: 26px;
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.texto-resultado {
+    margin-top: 26px;
+    padding: 20px;
+    text-align: left;
+    line-height: 1.7;
+    color: var(--cor-tinta);
+    background-color: var(--cor-amarelo);
+    border: 3px solid var(--cor-tinta);
+}
+
+button {
+    width: 100%;
+    padding: 16px 18px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.45;
+    color: var(--cor-tinta);
+    background-color: #FFFFFF;
+    border: 3px solid var(--cor-tinta);
+    box-shadow: 6px 6px 0 var(--cor-tinta);
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+button:hover,
+button:focus-visible {
+    background-color: var(--cor-amarelo);
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--cor-tinta);
+}
+
+button:active {
+    transform: translate(6px, 6px);
+    box-shadow: 0 0 0 var(--cor-tinta);
+}
+
+.iniciar-btn,
+.novamente-btn {
+    width: auto;
+    margin-top: 30px;
+    padding: 12px 38px;
+    font-family: "Bangers", Impact, "Arial Black", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--cor-papel);
+    background-color: var(--cor-vermelho);
+}
+
+.iniciar-btn:hover,
+.iniciar-btn:focus-visible,
+.novamente-btn:hover,
+.novamente-btn:focus-visible {
+    color: var(--cor-papel);
+    background-color: var(--cor-vermelho-escuro);
+}
+
+button:focus-visible {
+    outline: 3px solid var(--cor-tinta);
+    outline-offset: 4px;
+}
+
+.rodape {
+    margin-top: 36px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.creditos {
+    font-size: 0.8rem;
+    color: rgba(255, 248, 236, 0.72);
+}
+
+.assistencia {
+    font-size: 0.65rem;
+    color: rgba(255, 248, 236, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+
+    button:hover,
+    button:focus-visible,
+    button:active {
+        transform: none;
+    }
+}
